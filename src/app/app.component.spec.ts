@@ -14,17 +14,17 @@ describe('AppComponent', () => {
     }).compileComponents();
   }));
 
-  it('should create the app', () => {
+  it('should create the app', async(() => {
     const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
+    const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
-  });
+  }));
 
-  it(`should have as title 'git'`, () => {
+  it(`should have as title 'git'`, async(() => {
     const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
+    const app = fixture.debugElement.componentInstance;
     expect(app.title).toEqual('git');
-  });
+  }));
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
